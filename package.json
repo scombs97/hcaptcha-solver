@@ -1,0 +1,30 @@
+{
+  "name": "hcaptcha-solver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scombs97/hcaptcha-solver.git"
+  },
+  "author": "Shane Combs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scombs97/hcaptcha-solver/issues"
+  },
+  "homepage": "https://github.com/scombs97/hcaptcha-solver#readme",
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "firebase": "^8.6.5",
+    "ghost-cursor": "^1.1.5",
+    "got": "^11.8.2",
+    "imghash": "^0.0.9",
+    "puppeteer": "^10.0.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.8"
+  }
+}
