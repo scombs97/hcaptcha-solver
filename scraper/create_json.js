@@ -4,7 +4,7 @@ import util from 'util'
 const readdir = util.promisify(fs.readdir);
 
 const main = async() => {
-    let json = {}
+    let json = {'cache': {}}
 
     try {
         if (fs.existsSync('cache.json')) {
@@ -25,7 +25,9 @@ const main = async() => {
         let names = await readdir("./images/" + classification);
         for (let name of names) {
             let hashStr = name.split('.')[0]
-            json[hashStr] = classification
+            json.cache[hashStr] = {
+                'classification': classification
+            }
         }
     }
 

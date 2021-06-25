@@ -4,22 +4,8 @@ import Stealth from "puppeteer-extra-plugin-stealth";
 import { createCursor } from "ghost-cursor";
 import fs from 'fs'
 import got from "got";
-import path from "path";
 import EventEmitter from "events";
-
-if (!fs.existsSync('./images')) {
-  fs.mkdirSync('./images');
-  fs.mkdirSync('./images/airplane');
-  fs.mkdirSync('./images/bicycle');
-  fs.mkdirSync('./images/boat');
-  fs.mkdirSync('./images/car');
-  fs.mkdirSync('./images/motorbus');
-  fs.mkdirSync('./images/motorcycle');
-  fs.mkdirSync('./images/no_class');
-  fs.mkdirSync('./images/train');
-  fs.mkdirSync('./images/truck');
-  fs.mkdirSync('./images/umbrella');
-}
+import { read, write } from '../cache/firebase/index.js'
 
 const findCaptcha = async (page) => {
   await page.waitForSelector(".h-captcha");
@@ -34,6 +20,14 @@ const sleep = (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
+const getCurrentAmount = async() => {
+  const dir = './images/unclassified/';
+
+  fs.readdir(dir, (err, files) => {
+    console.log(files.length);
+  });
+}
+
 const openCaptcha = async (page) => {
   const frames = await page.frames();
   const checkboxFrame = findFrame(frames, "hcaptcha-checkbox");
@@ -41,7 +35,13 @@ const openCaptcha = async (page) => {
     await checkboxFrame.click("#checkbox");
   } catch (err) {
     await sleep(1000);
-    await checkboxFrame.click("#checkbox");
+    try {
+      await checkboxFrame.click("#checkbox");
+    } catch(e) {
+      getCurrentAmount();
+      console.error('Error')
+      process.exit();
+    }
   }
 };
 
@@ -54,7 +54,7 @@ const downloadRawImage = async (imageURL) => {
 
 const saveImage = (imageBuffer, hash) => {
   fs.writeFileSync(
-    process.cwd() + "/images/" + hash + ".jpg",
+    process.cwd() + "/images/unclassified/" + hash + ".jpg",
     imageBuffer,
     (err) => {
       if (err) {
@@ -82,6 +82,7 @@ const main = async () => {
       body.tasklist.forEach(async (t) => {
         const buffer = await downloadRawImage(t.datapoint_uri);
         const hash = await imghash.hash(buffer);
+        const cacheClassification = await read(hash)
         saveImage(buffer, hash);
         imageCount++;
         doneEmitter.emit("downloadedImage", imageCount);

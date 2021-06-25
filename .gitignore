@@ -1,2 +1,9 @@
 node_modules
-scraper/images
+scraper/images/airplane
+scraper/images/bicycle
+scraper/images/boat
+scraper/images/car
+scraper/images/motorbus
+scraper/images/motorcycle
+scraper/images/truck
+scraper/images/train
