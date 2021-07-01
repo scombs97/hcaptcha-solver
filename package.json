@@ -19,7 +19,9 @@
   "homepage": "https://github.com/scombs97/hcaptcha-solver#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "blueimp-load-image": "^5.14.0",
     "body-parser": "^1.19.0",
+    "canvas": "^2.8.0",
     "convert-array-to-csv": "^2.0.0",
     "csv-parser": "^3.0.0",
     "deepmerge": "^4.2.2",

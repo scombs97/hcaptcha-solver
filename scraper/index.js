@@ -13,36 +13,17 @@ const findCaptcha = async (page) => {
 };
 
 const findFrame = (frames, frameName) => {
-  return frames.filter((f) => f.url().includes(frameName))[0];
+  return frames.find(frame => frame.url().includes(frameName));
 };
 
 const sleep = (ms) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
 
-const getCurrentAmount = async() => {
-  const dir = './images/unclassified/';
-
-  fs.readdir(dir, (err, files) => {
-    console.log(files.length);
-  });
-}
-
 const openCaptcha = async (page) => {
   const frames = await page.frames();
-  const checkboxFrame = findFrame(frames, "hcaptcha-checkbox");
-  try {
-    await checkboxFrame.click("#checkbox");
-  } catch (err) {
-    await sleep(1000);
-    try {
-      await checkboxFrame.click("#checkbox");
-    } catch(e) {
-      getCurrentAmount();
-      console.error('Error')
-      process.exit();
-    }
-  }
+  const frame = findFrame(frames, 'hcaptcha-checkbox');
+  await frame.click('#checkbox')
 };
 
 const downloadRawImage = async (imageURL) => {
@@ -83,13 +64,17 @@ const main = async () => {
         const buffer = await downloadRawImage(t.datapoint_uri);
         const hash = await imghash.hash(buffer);
         const cacheClassification = await read(hash)
-        saveImage(buffer, hash);
+        if (cacheClassification === undefined) {
+          saveImage(buffer, hash) 
+        }
         imageCount++;
         doneEmitter.emit("downloadedImage", imageCount);
       });
     }
   });
-  await page.goto("https://hcaptcha.com");
+  await page.goto("https://hcaptcha.com",{
+    waitUntil: 'networkidle0',
+  });
   await findCaptcha(page);
   await openCaptcha(page);
 };
