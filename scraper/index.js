@@ -5,7 +5,7 @@ import { createCursor } from "ghost-cursor";
 import fs from 'fs'
 import got from "got";
 import EventEmitter from "events";
-import { read, write } from '../cache/firebase/index.js'
+import { read, write } from '../cache/index.js'
 
 const findCaptcha = async (page) => {
   await page.waitForSelector(".h-captcha");
@@ -72,7 +72,7 @@ const main = async () => {
       });
     }
   });
-  await page.goto("https://hcaptcha.com",{
+  await page.goto("https://accounts.hcaptcha.com/demo?sitekey=f0554631-1818-4941-97ce-26b7496cd196",{
     waitUntil: 'networkidle0',
   });
   await findCaptcha(page);

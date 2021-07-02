@@ -1,0 +1,508 @@
+﻿{
+  "st": 1625179682494,
+  "mm": [
+    [
+      41,
+      51,
+      1625179683499
+    ],
+    [
+      47,
+      49,
+      1625179683515
+    ],
+    [
+      56,
+      47,
+      1625179683532
+    ],
+    [
+      65,
+      46,
+      1625179683548
+    ],
+    [
+      75,
+      46,
+      1625179683564
+    ],
+    [
+      85,
+      45,
+      1625179683580
+    ],
+    [
+      96,
+      45,
+      1625179683596
+    ],
+    [
+      108,
+      45,
+      1625179683612
+    ],
+    [
+      122,
+      45,
+      1625179683628
+    ],
+    [
+      139,
+      47,
+      1625179683644
+    ],
+    [
+      159,
+      47,
+      1625179683660
+    ],
+    [
+      185,
+      48,
+      1625179683676
+    ],
+    [
+      211,
+      48,
+      1625179683692
+    ],
+    [
+      240,
+      48,
+      1625179683708
+    ],
+    [
+      269,
+      48,
+      1625179683724
+    ],
+    [
+      295,
+      47,
+      1625179683740
+    ],
+    [
+      98,
+      0,
+      1625179685578
+    ],
+    [
+      82,
+      23,
+      1625179685594
+    ],
+    [
+      72,
+      38,
+      1625179685611
+    ],
+    [
+      67,
+      47,
+      1625179685628
+    ],
+    [
+      66,
+      51,
+      1625179685646
+    ],
+    [
+      65,
+      51,
+      1625179685745
+    ],
+    [
+      62,
+      51,
+      1625179685762
+    ],
+    [
+      57,
+      51,
+      1625179685780
+    ],
+    [
+      49,
+      51,
+      1625179685797
+    ],
+    [
+      38,
+      49,
+      1625179685813
+    ],
+    [
+      29,
+      47,
+      1625179685830
+    ],
+    [
+      23,
+      45,
+      1625179685848
+    ]
+  ],
+  "mm-mp": 8.25174825174825,
+  "md": [
+    [
+      22,
+      44,
+      1625179685914
+    ]
+  ],
+  "md-mp": 0,
+  "mu": [
+    [
+      22,
+      44,
+      1625179685986
+    ]
+  ],
+  "mu-mp": 0,
+  "v": 1,
+  "topLevel": {
+    "inv": false,
+    "st": 1625116869674,
+    "sc": {
+      "availWidth": 2560,
+      "availHeight": 1040,
+      "width": 2560,
+      "height": 1080,
+      "colorDepth": 24,
+      "pixelDepth": 24,
+      "availLeft": 0,
+      "availTop": 0
+    },
+    "nv": {
+      "vendorSub": "",
+      "productSub": "20030107",
+      "vendor": "Google Inc.",
+      "maxTouchPoints": 0,
+      "userActivation": {},
+      "doNotTrack": "1",
+      "geolocation": {},
+      "connection": {},
+      "webkitTemporaryStorage": {},
+      "webkitPersistentStorage": {},
+      "hardwareConcurrency": 20,
+      "cookieEnabled": true,
+      "appCodeName": "Mozilla",
+      "appName": "Netscape",
+      "appVersion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "platform": "Win32",
+      "product": "Gecko",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+      "language": "en-US",
+      "languages": [
+        "en-US",
+        "en"
+      ],
+      "onLine": true,
+      "webdriver": false,
+      "serial": {},
+      "scheduling": {},
+      "mediaCapabilities": {},
+      "permissions": {},
+      "locks": {},
+      "usb": {},
+      "mediaSession": {},
+      "clipboard": {},
+      "credentials": {},
+      "keyboard": {},
+      "mediaDevices": {},
+      "storage": {},
+      "serviceWorker": {},
+      "wakeLock": {},
+      "deviceMemory": 8,
+      "hid": {},
+      "presentation": {},
+      "xr": {},
+      "userAgentData": {},
+      "bluetooth": {},
+      "managed": {},
+      "plugins": [
+        "internal-pdf-viewer",
+        "mhjfbmdgcfjbbpaeojofohoefgiehjai",
+        "internal-nacl-plugin"
+      ]
+    },
+    "dr": "",
+    "exec": false,
+    "wn": [],
+    "wn-mp": 0,
+    "xy": [],
+    "xy-mp": 17.90196078431372,
+    "mm": [
+      [
+        400,
+        2551,
+        1625179679115
+      ],
+      [
+        358,
+        2582,
+        1625179679131
+      ],
+      [
+        317,
+        2609,
+        1625179679147
+      ],
+      [
+        269,
+        2646,
+        1625179679171
+      ],
+      [
+        247,
+        2666,
+        1625179679187
+      ],
+      [
+        232,
+        2684,
+        1625179679203
+      ],
+      [
+        222,
+        2700,
+        1625179679219
+      ],
+      [
+        214,
+        2713,
+        1625179679235
+      ],
+      [
+        209,
+        2724,
+        1625179679251
+      ],
+      [
+        206,
+        2733,
+        1625179679267
+      ],
+      [
+        203,
+        2741,
+        1625179679283
+      ],
+      [
+        200,
+        2750,
+        1625179679300
+      ],
+      [
+        195,
+        2760,
+        1625179679316
+      ],
+      [
+        188,
+        2772,
+        1625179679332
+      ],
+      [
+        181,
+        2790,
+        1625179679348
+      ],
+      [
+        173,
+        2807,
+        1625179679364
+      ],
+      [
+        166,
+        2824,
+        1625179679380
+      ],
+      [
+        161,
+        2837,
+        1625179679397
+      ],
+      [
+        158,
+        2846,
+        1625179679415
+      ],
+      [
+        159,
+        2851,
+        1625179679432
+      ],
+      [
+        165,
+        2854,
+        1625179679449
+      ],
+      [
+        174,
+        2856,
+        1625179679465
+      ],
+      [
+        186,
+        2856,
+        1625179679481
+      ],
+      [
+        201,
+        2856,
+        1625179679497
+      ],
+      [
+        216,
+        2856,
+        1625179679513
+      ],
+      [
+        231,
+        2856,
+        1625179679529
+      ],
+      [
+        246,
+        2856,
+        1625179679545
+      ],
+      [
+        261,
+        2857,
+        1625179679561
+      ],
+      [
+        278,
+        2859,
+        1625179679577
+      ],
+      [
+        296,
+        2863,
+        1625179679594
+      ],
+      [
+        316,
+        2868,
+        1625179679610
+      ],
+      [
+        354,
+        2882,
+        1625179679638
+      ],
+      [
+        380,
+        2894,
+        1625179679655
+      ],
+      [
+        402,
+        2961,
+        1625179680361
+      ],
+      [
+        378,
+        2958,
+        1625179680377
+      ],
+      [
+        353,
+        2954,
+        1625179680393
+      ],
+      [
+        328,
+        2950,
+        1625179680409
+      ],
+      [
+        353,
+        2915,
+        1625179683745
+      ],
+      [
+        377,
+        2914,
+        1625179683761
+      ],
+      [
+        397,
+        2913,
+        1625179683777
+      ],
+      [
+        402,
+        2564,
+        1625179685457
+      ],
+      [
+        372,
+        2603,
+        1625179685473
+      ],
+      [
+        338,
+        2646,
+        1625179685489
+      ],
+      [
+        299,
+        2692,
+        1625179685505
+      ],
+      [
+        260,
+        2738,
+        1625179685521
+      ],
+      [
+        224,
+        2782,
+        1625179685537
+      ],
+      [
+        190,
+        2821,
+        1625179685553
+      ],
+      [
+        162,
+        2853,
+        1625179685569
+      ]
+    ],
+    "mm-mp": 16.74536219081274,
+    "md": [],
+    "md-mp": 0,
+    "mu": [],
+    "mu-mp": 0
+  },
+  "session": [
+    [
+      "W0_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoiVlhwa0FVaGhSK005Ykx2amlWdnhyQzBiUWE3dU41TTI2WGw5ekl5dFNuSjhlUXMxa1drcFRiTEI2aVZRSm5ZNFFSSUh6dmllMk9CSFpwZ0IwVzdHNmE3NjZNbVo1Vi9HUlNWdFcrT0lFQXpja1d2elNaQldDK2RVY3FDWEtiVTlmUEpnaTZ4WVZhaDNDK1RSQW80L2V0WnBwL1c0eWtFOC9qOU1BdmFMWlJ0N282Z2dIazZ0Z1k0ajJ1aEVQbjdZZ3p1WWZXQVBNRytIaXZRelVBWk1pM3ZkRURwYU96SkFxcUk2ZzE4TkRxTW9SNUg2eHRlRVdxNll6RDdwbm1ZR0g1S1ByY2pUaTJxa2U0OHY1cnA1SnhNK29oa1ZhNUZSb25CMURSYnVmNXJDSHNMMVQrOXJiUFNYQzUyY2cydTRiRzh6c2tWd1A0UG1jc01OVTBLd2xMd1ZtWjlONUJsTkRGcElsQTQrRVBCVHgybUdBK1dkOTA4TUhha3JOamFuaW50aVNiZzhVWXJwZFMwVGV2bUNKL1RFY3pnL3VmclRDbHp2OVJhR3A0RFIvdm9UNy9JT21wakdxQ2l0a3dLUXJVQUdTYzBmMVVYUWxRL2tmNFI3OERFWVVJbUo5MXBwQlJrYVJpM1pDVGo4OGZsVEJ6cDFHSGptcnRQcjJuWmJqZFNURlZFalBRYTg1VEtKQmpCeFk2NDVWbUs5K2NVK1lVcHdpeGhSNWlsaUVwbU5IQTNXbFQxbEdDTStzY28rUzN2WjBmZGNmNUtmS0pkd2I5V2dOZ3NVM3l5MHFvak1sVDZMRHRVQ25qcC9hbDl0RkFCOUJEM2xycHViOGh4VC82VXNQemo0aEt2WlRCUTlFUU5iQnQ0UUZNdXpvdHVNIiwiZXhwIjoxNjI1MTE3ODI1fQ.dsRNUYP2xSc5sWNyIaBqpzdCXp58buN0QQW9h-gekWQ",
+      "0j6f2kbmh6lj"
+    ],
+    [
+      "W0_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoianY0bzFGd01Va2FDaHVGZVZZL2ZWMG1URXNHaEpFUHhkbncwVTl6UHBVMWhIR3l0dExHb0FPOUlRbG4xdGZJeXpVcFNtMUdYQWtNRUpOLzd0T0FoUzVCTHRZMjUvTGVaMXZxTGJxQWViR2dnM1FTY2lPRmRlcHJ0bFByTURubFRva3d2dzZnaUdXYkFrZWRvSW52N0VuR3F5VFRFcDhHdHBQTUEwZEV4cms0V0FlUGtVNEZWSlJLVEExeis1VFZCWmFlOVgzMWU3RVJKazE4ZXJCU2pWUmE5K2x1RTBCOXVYUmF6c1VyRmErYzhBVzhsQUk1SlFoSWNCNGN4cGZ3a0tQd1VWelZDNVNLOU5tUkNUSTVDVU9penVGWXRSNk1oZTNEU29hbCtTSlE0a2FYNTFQaG4xWERlU3llZnlMaVp4eEhKdjVQREpzdEljU2l4b0QrbzRMOFM3S2ZlY1lJWkhySVFkcGlvZXpWRnVhTUhCSCtXSGp2WWhUOVlkNERXWXhCUUd1a2g4MVU1ZzI1MG90WllNdFFneU1wSUFrUHYzRUtabFVZZFpEYnRmQW1seTB2Qnl6YnMrd1dBZXhuOEpiZzM5ZEVUU1c1ak9ER1NFYis0RGZRYkNXbGkxbm9TcWZUNnZkdjU4TXVpam1HYWk0OW1lNmNOWCtLQzdwVmtYemJkeEh1S0lEZ2wvaHN0ZUtUaXFNdG5rb05rdG93cW4rcHlqSkZNQmFwMC80SHZNb1pkQWpnK09iZXZhM3orRnpycXJZaU5Nc1Fua3B2OFpHaUtVM2ZHOHJOaFZLeTJydXBDZUZ1L0VUcVBuYmZlcGtWcXl4ZzNwSGpjSUxnaDVnTm02ekVMM3NEakFOdVVMV0sxaXl1K2Jxa1dMcEdSIiwiZXhwIjoxNjI1MTc1NTk1fQ.QbUJcaUSo2PwPQsQy1-Cem8jMQS339Xz4yGghAfMmxc",
+      "0j6f2kbmh6lj"
+    ],
+    [
+      "W0_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoieU5JT2hSUGE0ZU5hM3J6STdJSW9seHMvc0ZNZGZxdmM1ZmJaRkNheXBEZ2c5OVlJU3NFcXBCNFVmMGJkeWliZ2N2ajRkTUoxY2ZlVnVZNWdBd2JhNkQ5OUZLWmNSbnlGK1NIMW5IaXRzOUtoN2xGZExPelM4aEtiYnRJSzYwbVdKa3Bpbk9PRlVLdnZDUDZnYzlXV0N3SmtrUFBWeTFCZ1ZQZEp2VVZhUDBuTzhJN3NTSVVmUi9tTDdHOWMrVEdIS2pLOUpKRlEycVI0ZkhWeUVhNFY4WjY2bkw3ZS9oUHNEbVlTVGxTVFVwZFJqc0Y1djVvZFh3Wjd0amkremwvbWNOeUozc1hFY1c5YTNmQmVNeVVXYmVidytQZFpUU2Z1RTBIK1h6VU03czlIcldEaUJDVnRpM2M3UVVLdllFbWVHeUp1Ym1yZWFvbUJlSGxjQVpEZUp0VzZiVUdTdFBqNUlYOER6eEJsdHl2NGxqL0NwVnJZZFlyRGdhUExpbmtLQ292UGdQM0hJdDN3Tmkvd09HbWp4S0FGdnB5VFdBTWhkVjNMOGtyeVF4WkNKN0VzdjhUZUFUcVhMTlhqb1lqKzdncEFlNThpd08rWFFoVzZGODlyTHdVMDhlL2ZZSzBML0g3S2xCSzBnTkpFMEk0ZmlndWFEM1NRYndwQ0U0T09DZUV6djdrOG9uM2JEV1ZhVDJHRjVxQVVQRFMxK3F0VmFNS2Y0WFVnc1YzU0hCVng3ZzJaQkNNNWxMTUI3VVJnbnZvSkM1VEJkaUtaN1NmYm9iUlk0K2Z6UnFYOFI1NXBSaWdEcDlHYWo5T3JEZFkwbmdTbEtRUEcyVzl0TDM5QWpPYVU4QzlaZ2pwaXVzQVZtRm1ld3NMQnhlQXc1Q214IiwiZXhwIjoxNjI1MTc2MDY0fQ.7J7aNRVxdZUNAJ4GzV5mK5pMvLUfh12sOGyEMiSnNd8",
+      "0j6f2kbmh6lj"
+    ]
+  ],
+  "widgetList": [
+    "0j6f2kbmh6lj"
+  ],
+  "widgetId": "0j6f2kbmh6lj",
+  "href": "https://www.hcaptcha.com/",
+  "prev": {
+    "escaped": false,
+    "passed": false,
+    "expiredChallenge": false,
+    "expiredResponse": false
+  }
+}
