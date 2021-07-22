@@ -6,6 +6,7 @@ import fs from 'fs'
 import got from "got";
 import EventEmitter from "events";
 import { read, write } from '../cache/index.js'
+import { classify } from "../inference/index.js";
 
 const findCaptcha = async (page) => {
   await page.waitForSelector(".h-captcha");
@@ -65,14 +66,14 @@ const main = async () => {
         const hash = await imghash.hash(buffer);
         const cacheClassification = await read(hash)
         if (cacheClassification === undefined) {
-          saveImage(buffer, hash) 
+          await classify(t.datapoint_uri)
         }
         imageCount++;
         doneEmitter.emit("downloadedImage", imageCount);
       });
     }
   });
-  await page.goto("https://accounts.hcaptcha.com/demo?sitekey=f0554631-1818-4941-97ce-26b7496cd196",{
+  await page.goto("https://hcaptcha.com/",{
     waitUntil: 'networkidle0',
   });
   await findCaptcha(page);
