@@ -27,7 +27,7 @@
     "deepmerge": "^4.2.2",
     "express": "^4.17.1",
     "firebase": "^8.6.5",
-    "ghost-cursor": "^1.1.5",
+    "ghost-cursor": "^1.1.6",
     "got": "^11.8.2",
     "imghash": "^0.0.9",
     "node-csv": "^0.1.2",
