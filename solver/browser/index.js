@@ -3,8 +3,9 @@ import Stealth from "puppeteer-extra-plugin-stealth";
 import ghostCursor from 'ghost-cursor'
 import imghash from "imghash";
 import got from "got";
-import { read } from '../../cache/index.js'
+import { read, write } from '../../cache/index.js'
 import { classify } from "../../inference/index.js";
+import { save } from "../../save/save_images.js"
 
 function getTime() {
     var d = new Date();
@@ -70,7 +71,7 @@ const solve = async(page, cursor, question, tasklist) => {
     const frame = findFrame(frames, 'hcaptcha-challenge')
     const elements = await frame.$$('div.task-image')
 
-    console.log(`${getTime()}Solving captcha...`)
+    console.log(`${getTime()}Solving captcha for ${question}...`)
     const clickCellsOnFirstScreen = new Promise(async(resolve) => {
         for (let i = 0; i < firstScreenCells.length; i++) {
             if (firstScreenCells[i].classification === question) {
@@ -134,17 +135,35 @@ const main = async(url) => {
             const solvePromise = new Promise(() => {
                 solve(page, cursor, question, solvedTasks)
             })
+            const savePromise = new Promise(() => {
+                save(solvedTasks)
+            })
 
-            Promise.all([solvePromise])
+            Promise.all([solvePromise, savePromise])
         } else if (e.url().includes("checkcaptcha")) {
             try {
                 const body = await e.json();
                 if (body.pass) {
                     console.log(`${getTime()}Successfully solved captcha.`)
+
+                   /*const saveToCachePromises = finalTaskList.map(async(t) => {
+                        console.log(`${t.hash} : ${t.method} : ${t.classification}`)
+                        if (t.method === "inference" && t.classification === finalQuestion) {
+                            console.log(`Saving ${t.hash} to cache as ${t.classification}`)
+                            write(t.hash)
+                        }
+                    })
+                    await Promise.all(saveToCachePromises).then(() => {
+                        const id = body.generated_pass_UUID
+                        browser.close()
+                        console.log(id)
+                        return id
+                    })*/
+
                     const id = body.generated_pass_UUID
-                    browser.close()
-                    //console.log(id)
-                    return id
+                        browser.close()
+                        console.log(id)
+                        return id
                 }
             } catch(e) {
                 //Do nothing.
