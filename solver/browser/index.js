@@ -54,6 +54,7 @@ const classifyTasks = async(tasklist) => {
             t.classification = cacheClassification
             t.method = "cache"
         }
+        console.log(`${t.hash} : ${t.method} : ${t.classification}`)
         return t
     })
 
@@ -63,7 +64,7 @@ const classifyTasks = async(tasklist) => {
 }
 
 const solve = async(page, cursor, question, tasklist) => {
-    let temp = tasklist
+    let temp = tasklist.slice()
     const firstScreenCells = temp.splice(0,9)
     const secondScreenCells = temp
 
@@ -125,12 +126,16 @@ const main = async(url) => {
     const cursor = ghostCursor.createCursor(page, await ghostCursor.getRandomPagePoint(page), true)
     await ghostCursor.installMouseHelper(page)
 
+    let finalTaskList
+    let finalQuestion
     page.on("response", async(e) => {
         if (e.url().includes("getcaptcha")) {
             const body = await e.json();
             const str = body.requester_question.en.split(' ')
             const question = str[str.length-1]
+            finalQuestion = question
             const solvedTasks = await classifyTasks(body.tasklist)
+            finalTaskList = solvedTasks
 
             const solvePromise = new Promise(() => {
                 solve(page, cursor, question, solvedTasks)
@@ -145,12 +150,10 @@ const main = async(url) => {
                 const body = await e.json();
                 if (body.pass) {
                     console.log(`${getTime()}Successfully solved captcha.`)
-
-                   /*const saveToCachePromises = finalTaskList.map(async(t) => {
-                        console.log(`${t.hash} : ${t.method} : ${t.classification}`)
+                    const saveToCachePromises = finalTaskList.map(async(t) => {
                         if (t.method === "inference" && t.classification === finalQuestion) {
                             console.log(`Saving ${t.hash} to cache as ${t.classification}`)
-                            write(t.hash)
+                            write(t.hash, t.classification)
                         }
                     })
                     await Promise.all(saveToCachePromises).then(() => {
@@ -158,12 +161,7 @@ const main = async(url) => {
                         browser.close()
                         console.log(id)
                         return id
-                    })*/
-
-                    const id = body.generated_pass_UUID
-                        browser.close()
-                        console.log(id)
-                        return id
+                    })
                 }
             } catch(e) {
                 //Do nothing.
@@ -178,4 +176,4 @@ const main = async(url) => {
     await openCaptcha(page, cursor);
 }
 
-const id = await main("https://hcaptcha.com/")
+main("https://hcaptcha.com/")
