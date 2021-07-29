@@ -13,12 +13,22 @@ const read = async(hashValue) => {
     }
 }
 
-const write = async(hashValue, classification) => {
+const getMethod = async(hashValue) => {
+    try {
+        const response = await axios.get(`${FIREBASE_URL}/cache/${hashValue}.json?auth=${API_KEY}`)
+        return response.data.method
+    } catch (error) {
+        return undefined
+    }
+}
+
+const write = async(hashValue, classification, method) => {
     await axios.put(`${FIREBASE_URL}/cache/${hashValue}.json?auth=${API_KEY}`, {
-        'classification': classification
+        'classification': classification,
+        'method': method
     }).catch(error => {
         console.error(error)
     })
 }
 
-export {read, write}
+export {read, write, getMethod}

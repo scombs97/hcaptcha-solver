@@ -54,7 +54,7 @@ const classifyTasks = async(tasklist) => {
             t.classification = cacheClassification
             t.method = "cache"
         }
-        console.log(`${t.hash} : ${t.method} : ${t.classification}`)
+        console.log(`${getTime()}${t.hash} : ${t.method} : ${t.classification}`)
         return t
     })
 
@@ -120,8 +120,8 @@ const downloadRawImage = async (imageURL) => {
 const main = async(url) => {
     console.log(`${getTime()}Solving hCaptcha for ${url}`)
     puppeteer.use(Stealth());
-    const browser = await puppeteer.launch({headless: false, args: [`--window-size=${300},${700}`]});
-    //const browser = await puppeteer.launch();
+    //const browser = await puppeteer.launch({headless: false, args: [`--window-size=${300},${700}`]});
+    const browser = await puppeteer.launch();
     const page = await browser.newPage();
     const cursor = ghostCursor.createCursor(page, await ghostCursor.getRandomPagePoint(page), true)
     await ghostCursor.installMouseHelper(page)
@@ -152,8 +152,8 @@ const main = async(url) => {
                     console.log(`${getTime()}Successfully solved captcha.`)
                     const saveToCachePromises = finalTaskList.map(async(t) => {
                         if (t.method === "inference" && t.classification === finalQuestion) {
-                            console.log(`Saving ${t.hash} to cache as ${t.classification}`)
-                            write(t.hash, t.classification)
+                            console.log(`${getTime()}Saving ${t.hash} to cache as ${t.classification}`)
+                            write(t.hash, t.classification, t.method)
                         }
                     })
                     await Promise.all(saveToCachePromises).then(() => {
